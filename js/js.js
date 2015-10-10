@@ -25,6 +25,49 @@ function create() {
         result += s;
         result += "\n";
     });
-
+    check(result);
     document.getElementById('organized').value = result;
+}
+
+function create2() {
+    var mailValue1 = document.getElementById('maillist1').value;
+    var mailValue2 = document.getElementById('maillist2').value;
+    var splitMailValue1 = mailValue1.split("\n");
+    var splitMailValue2 = mailValue2.split("\n");
+    //splitMailValue.sort();
+    //splitTechValue.sort();
+
+    var combinedDiff = [];
+    $.each(splitMailValue1.concat(splitMailValue2), function(i, el){
+        if($.inArray(el, combinedDiff) === -1) combinedDiff.push(el);
+    });
+    combinedDiff.sort();
+    var result = "";
+    combinedDiff.forEach(function(s) {
+        result += s;
+        result += "\n";
+    });
+    check(result);
+    document.getElementById('combined').value = result;
+}
+
+function check(result) {
+    if(result.match("johncena", "i") || result.match("john cena", "i")) {
+        document.getElementById('wrapper').style.display = 'none';
+        document.getElementById('johncena').style.display = 'block';
+        document.getElementById('johncena').innerHTML = '<iframe width="100%" height="1000px" src="http://www.youtube.com/embed/9EPL_4HyCFQ?autoplay=1"></iframe>';
+        setTimeout(reset, 14000)
+    }
+    // if(result.match("moon" , "i")) {
+    //     document.getElementById('wrapper').style.display = 'none';
+    //     document.getElementById('johncena').style.display = 'block';
+    //     document.getElementById('johncena').innerHTML = '';
+    //     document.getElementById('johncena').innerHTML = '<iframe width="100%" height="1000px" id="youtube_player" class="yt_player_iframe" src="http://www.youtube.com/embed/Lp350b00nsQ?autoplay=1" allowscriptaccess="always" frameborder="0"></iframe>';
+    //     setTimeout(reset, 10000)
+    // }
+}
+
+function reset() {
+        document.getElementById('wrapper').style.display = 'block';
+        document.getElementById('johncena').style.display = 'none';
 }
