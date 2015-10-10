@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Little Web appy</title>
+        <link rel="stylesheet" href="css/css.css" type="text/css">
+        <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+        <link href='https://fonts.googleapis.com/css?family=Rum+Raisin' rel='stylesheet' type='text/css'>
+        <script language="javascript" type="text/javascript" src="js/js.js"></script>
+    </head>
+    <body>
+        <div class="container">
+            <h1> Halo, this is website.</h1>
+            <div class="col-xs-12">
+                <div class="col-sm-6 col-xs-12">
+                    Mailing List usernames here <br>
+                    <!-- <input class="in" name="maillist" id="maillist"> -->
+                    <textarea class="in" id="maillist"></textarea>
+                </div>
+
+                <div class="col-sm-6 col-xs-12">
+                    TechSync List usernames here <br>
+                    <textarea class="in" id="techsync"></textarea>
+                </div>
+            </div>
+            <div>
+                <br>Press button to generate lists :)<br>
+            </div>
+            <button onclick="create()">Generate</button>
+            <div class="col-xs-12">
+                Add this to your Mailing List <br>
+                <textarea class="in" id="final"></textarea>
+            </div>
+        </div>
+    </body>
+</html>

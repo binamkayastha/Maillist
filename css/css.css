@@ -1,0 +1,19 @@
+* {
+    padding: 0;
+    margin: 0;
+    vertical-align: top;
+    text-align: center;
+    font-family: 'Rum Raisin', sans-serif;
+    font-size: 1.5em;
+}
+
+h1 {
+    font-family: 'Rum Rasin', sans-serif;
+    font-size: 1.1em;
+}
+
+.in {
+    width: 100%;
+    height: 200px;
+    font-size: 12px;
+}
