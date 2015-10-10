@@ -1,6 +1,8 @@
 function create() {
     var mailValue = document.getElementById('maillist').value;
     var techValue = document.getElementById('techsync').value;
+    mailValue = mailValue.toLowerCase();
+    techValue = techValue.toLowerCase();
     var result = "MailList: " + mailValue + "\nTechValues: " + techValue;
     //document.getElementById('final').value = result;
     var splitMailValue = mailValue.split("\n");
@@ -32,6 +34,8 @@ function create() {
 function create2() {
     var mailValue1 = document.getElementById('maillist1').value;
     var mailValue2 = document.getElementById('maillist2').value;
+    mailValue1 = mailValue1.toLowerCase();
+    mailValue2 = mailValue2.toLowerCase();
     var splitMailValue1 = mailValue1.split("\n");
     var splitMailValue2 = mailValue2.split("\n");
     //splitMailValue.sort();
