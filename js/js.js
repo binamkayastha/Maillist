@@ -31,30 +31,6 @@ function create() {
     document.getElementById('organized').value = result;
 }
 
-function create2() {
-    var mailValue1 = document.getElementById('maillist1').value;
-    var mailValue2 = document.getElementById('maillist2').value;
-    mailValue1 = mailValue1.toLowerCase();
-    mailValue2 = mailValue2.toLowerCase();
-    var splitMailValue1 = mailValue1.split("\n");
-    var splitMailValue2 = mailValue2.split("\n");
-    //splitMailValue.sort();
-    //splitTechValue.sort();
-
-    var combinedDiff = [];
-    $.each(splitMailValue1.concat(splitMailValue2), function(i, el){
-        if($.inArray(el, combinedDiff) === -1) combinedDiff.push(el);
-    });
-    combinedDiff.sort();
-    var result = "";
-    combinedDiff.forEach(function(s) {
-        result += s;
-        result += "\n";
-    });
-    check(result);
-    document.getElementById('combined').value = result;
-}
-
 function check(result) {
     if(result.match("johncena", "i") || result.match("john cena", "i")) {
         document.getElementById('wrapper').style.display = 'none';
